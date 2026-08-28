@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bnuqbtkjkp1k0"]
+
+[ext_resource type="Script" uid="uid://1hhhwkiia0d8" path="res://spiller.gd" id="1_lwms7"]
+[ext_resource type="Texture2D" uid="uid://gpr438qdtqua" path="res://Assets/SpillerTank.png" id="2_v30kx"]
+[ext_resource type="Texture2D" uid="uid://d2cyy8v3ix055" path="res://Assets/SpillerTankKannon.png" id="3_mm7kc"]
+[ext_resource type="Script" uid="uid://dhlnmfb2ic1ap" path="res://cannon.gd" id="4_v30kx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ksfn8"]
+size = Vector2(116, 168)
+
+[node name="Spiller" type="CharacterBody2D" unique_id=1425814717]
+motion_mode = 1
+script = ExtResource("1_lwms7")
+
+[node name="Tank" type="Sprite2D" parent="." unique_id=410571231]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_v30kx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=390288912]
+position = Vector2(-2, -7)
+shape = SubResource("RectangleShape2D_ksfn8")
+
+[node name="Cannon" type="Sprite2D" parent="." unique_id=647344656]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_mm7kc")
+offset = Vector2(0, -120)
+script = ExtResource("4_v30kx")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1075932825]
+offset_left = -10.0
+offset_top = -16.0
+offset_right = 10.0
+offset_bottom = -10.0
+show_percentage = false
