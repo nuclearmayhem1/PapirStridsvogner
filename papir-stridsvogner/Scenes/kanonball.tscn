@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bvdh56pmprrvm"]
 
-[ext_resource type="Script" uid="uid://d0u5ourhv7glh" path="res://kanonball.gd" id="1_xx1is"]
-[ext_resource type="Texture2D" uid="uid://cin8a4v3a8sm4" path="res://Assets/SpillerKannonkule.png" id="2_6exk2"]
+[ext_resource type="Script" uid="uid://d0u5ourhv7glh" path="res://Scripts/kanonball.gd" id="1_o4crv"]
+[ext_resource type="Texture2D" uid="uid://cin8a4v3a8sm4" path="res://Assets/SpillerKannonkule.png" id="2_gcls8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6jkyn"]
-radius = 32.140316
+radius = 20.024984
 
 [node name="Kanonball" type="Node2D" unique_id=1442434853]
-script = ExtResource("1_xx1is")
+script = ExtResource("1_o4crv")
 
 [node name="CollisionShape2D" type="Area2D" parent="." unique_id=1386081034]
 
@@ -15,7 +15,8 @@ script = ExtResource("1_xx1is")
 shape = SubResource("CircleShape2D_6jkyn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2096100307]
-texture = ExtResource("2_6exk2")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_gcls8")
 
 [node name="Timer" type="Timer" parent="." unique_id=936989888]
 wait_time = 5.0

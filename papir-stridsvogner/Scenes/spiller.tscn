@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://bnuqbtkjkp1k0"]
 
-[ext_resource type="Script" uid="uid://1hhhwkiia0d8" path="res://spiller.gd" id="1_lwms7"]
-[ext_resource type="Texture2D" uid="uid://gpr438qdtqua" path="res://Assets/SpillerTank.png" id="2_v30kx"]
-[ext_resource type="Texture2D" uid="uid://d2cyy8v3ix055" path="res://Assets/SpillerTankKannon.png" id="3_mm7kc"]
-[ext_resource type="Script" uid="uid://dhlnmfb2ic1ap" path="res://kanon.gd" id="4_v30kx"]
+[ext_resource type="Script" uid="uid://1hhhwkiia0d8" path="res://Scripts/spiller.gd" id="1_51lhb"]
+[ext_resource type="Texture2D" uid="uid://gpr438qdtqua" path="res://Assets/SpillerTank.png" id="2_8k014"]
+[ext_resource type="Texture2D" uid="uid://d2cyy8v3ix055" path="res://Assets/SpillerTankKannon.png" id="3_fuqwo"]
+[ext_resource type="Script" uid="uid://dhlnmfb2ic1ap" path="res://Scripts/kanon.gd" id="4_8k014"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ksfn8"]
 size = Vector2(163, 121)
 
 [node name="Spiller" type="CharacterBody2D" unique_id=1425814717]
 motion_mode = 1
-script = ExtResource("1_lwms7")
+script = ExtResource("1_51lhb")
 
 [node name="Tank" type="Sprite2D" parent="." unique_id=410571231]
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_v30kx")
+texture = ExtResource("2_8k014")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=390288912]
 position = Vector2(-1.5, -2.5)
@@ -24,6 +24,6 @@ shape = SubResource("RectangleShape2D_ksfn8")
 [node name="Kanon" type="Sprite2D" parent="." unique_id=647344656]
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_mm7kc")
+texture = ExtResource("3_fuqwo")
 offset = Vector2(0, -120)
-script = ExtResource("4_v30kx")
+script = ExtResource("4_8k014")
