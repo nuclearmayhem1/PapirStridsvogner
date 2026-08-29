@@ -35,8 +35,6 @@ func shoot():
 	kanonball_instance.transform.origin = self.global_transform.origin + (firing_direction * 180)
 	# Gi den fart i kanonen sin retning
 	kanonball_instance.velocity = firing_direction * firing_speed
-	# Gi den litt av spilleren sin fart 
-	kanonball_instance.velocity += get_parent().velocity / 5
 	# Plasser den i verden som "søsken" til spilleren, slik at den ikke henger etter spilleren
 	get_parent().add_sibling(kanonball_instance)
 	
