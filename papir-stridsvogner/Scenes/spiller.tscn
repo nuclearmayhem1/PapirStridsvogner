@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://1hhhwkiia0d8" path="res://Scripts/spiller.gd" id="1_51lhb"]
 [ext_resource type="Texture2D" uid="uid://gpr438qdtqua" path="res://Assets/SpillerTank.png" id="2_8k014"]
-[ext_resource type="Texture2D" uid="uid://d2cyy8v3ix055" path="res://Assets/SpillerTankKannon.png" id="3_fuqwo"]
-[ext_resource type="Script" uid="uid://dhlnmfb2ic1ap" path="res://Scripts/kanon.gd" id="4_8k014"]
+[ext_resource type="PackedScene" uid="uid://dheg1cgn3jwtu" path="res://Scenes/kanon.tscn" id="3_jiy7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ksfn8"]
 size = Vector2(163, 121)
@@ -21,9 +20,5 @@ texture = ExtResource("2_8k014")
 position = Vector2(-1.5, -2.5)
 shape = SubResource("RectangleShape2D_ksfn8")
 
-[node name="Kanon" type="Sprite2D" parent="." unique_id=647344656]
-rotation = 1.5707964
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_fuqwo")
-offset = Vector2(0, -120)
-script = ExtResource("4_8k014")
+[node name="Kanon" parent="." unique_id=231075190 instance=ExtResource("3_jiy7n")]
+position = Vector2(0, -1)

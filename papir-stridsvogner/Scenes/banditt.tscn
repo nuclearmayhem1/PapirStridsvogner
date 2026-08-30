@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://byo2w5gabse4e"]
+
+[ext_resource type="Script" uid="uid://brevucuevo3qg" path="res://Scripts/banditt.gd" id="1_b457c"]
+[ext_resource type="Texture2D" uid="uid://cv70ikx4f7j37" path="res://Assets/FiendeTank.png" id="2_18jgk"]
+[ext_resource type="Texture2D" uid="uid://dj0kfue2f11fa" path="res://Assets/FiendeTankKannon.png" id="3_gwlub"]
+[ext_resource type="Script" uid="uid://dt1obx7246ykm" path="res://Scripts/fiende_kanon.gd" id="4_05m7o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjpqf"]
+size = Vector2(185, 135)
+
+[node name="Banditt" type="CharacterBody2D" unique_id=1097819703]
+motion_mode = 1
+slide_on_ceiling = false
+script = ExtResource("1_b457c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1962392917]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_pjpqf")
+
+[node name="Tank" type="Sprite2D" parent="." unique_id=1551329297]
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_18jgk")
+
+[node name="FiendeKanon" type="Sprite2D" parent="." unique_id=560186126]
+position = Vector2(-13, -1)
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_gwlub")
+offset = Vector2(0, -125)
+script = ExtResource("4_05m7o")

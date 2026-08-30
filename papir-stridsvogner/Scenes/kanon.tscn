@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dheg1cgn3jwtu"]
+
+[ext_resource type="Texture2D" uid="uid://d2cyy8v3ix055" path="res://Assets/SpillerTankKannon.png" id="1_4ahy0"]
+[ext_resource type="Script" uid="uid://dhlnmfb2ic1ap" path="res://Scripts/kanon.gd" id="2_ei18d"]
+
+[node name="Kanon" type="Sprite2D" unique_id=231075190]
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_4ahy0")
+offset = Vector2(0, -125)
+script = ExtResource("2_ei18d")
