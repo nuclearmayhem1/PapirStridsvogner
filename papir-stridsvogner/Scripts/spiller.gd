@@ -1,30 +1,23 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
-
 
 func _physics_process(delta: float) -> void:
 	
-	#Input, generates a float from -1.0 to 1.0 for up and down directions
-	var x_direction := Input.get_axis("move_left", "move_right")
-	var y_direction := Input.get_axis("move_up", "move_down")
+	var movement_direction = Vector2.ZERO
 	
+	if Input.is_action_pressed("move_up"):
+		movement_direction += Vector2.UP
+	if Input.is_action_pressed("move_left"):
+		movement_direction += Vector2.LEFT
+	if Input.is_action_pressed("move_right"):
+		movement_direction += Vector2.RIGHT
+	if Input.is_action_pressed("move_down"):
+		movement_direction += Vector2.DOWN
 	
-	if x_direction:
-		velocity.x = x_direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
-	if y_direction:
-		velocity.y = y_direction * SPEED
-	else:
-		velocity.y = move_toward(velocity.y, 0, SPEED)
-		
+	velocity = movement_direction * SPEED
 	#if you let go of movement keys, the belts won't snap to facing right when the tank stops moving
-	if (x_direction == 0) and (y_direction == 0):
-		pass
-	else: 
+	if velocity != Vector2.ZERO:
 		self.global_rotation = velocity.angle()
 
 	move_and_slide()
