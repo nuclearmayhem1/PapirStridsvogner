@@ -29,3 +29,8 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_gwlub")
 offset = Vector2(0, -125)
 script = ExtResource("4_05m7o")
+
+[node name="Timer" type="Timer" parent="." unique_id=206405195]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="FiendeKanon" method="_on_timer_timeout"]
