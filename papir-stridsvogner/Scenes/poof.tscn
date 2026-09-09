@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://crlaw1vhwawar"]
+
+[ext_resource type="Script" uid="uid://cfb4nqk1hsmbd" path="res://Scripts/poof.gd" id="1_ogcmu"]
+[ext_resource type="Texture2D" uid="uid://by7baj2x0wego" path="res://Assets/PuffEffekt.png" id="2_f6psd"]
+
+[node name="Poof" type="Node2D" unique_id=612022755]
+z_index = 2
+script = ExtResource("1_ogcmu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=928335279]
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("2_f6psd")
+
+[node name="Timer" type="Timer" parent="." unique_id=1760660166]
+wait_time = 0.4
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

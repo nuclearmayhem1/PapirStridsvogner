@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 
+signal player_damage
+
 func _physics_process(_delta: float) -> void:
 	
 	var movement_direction = Vector2.ZERO
@@ -21,3 +23,7 @@ func _physics_process(_delta: float) -> void:
 		self.global_rotation = velocity.angle()
 
 	move_and_slide()
+
+
+func take_damage():
+	emit_signal("player_damage")

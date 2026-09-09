@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pjpqf"]
 size = Vector2(185, 135)
 
-[node name="Banditt" type="CharacterBody2D" unique_id=1097819703]
+[node name="Banditt" type="CharacterBody2D" unique_id=1097819703 groups=["hostile"]]
 motion_mode = 1
 slide_on_ceiling = false
 script = ExtResource("1_b457c")

@@ -10,7 +10,7 @@ func shoot():
 	# Forbered en ny kanonkule
 	var kanonkule_instance = kanonkule.instantiate() 
 	# Marker at kanonkulen tilhører fienden.
-	kanonkule_instance.add_to_group("Hostile")
+	kanonkule_instance.add_to_group("hostile")
 	# Flytt den til enden av kanonen
 	kanonkule_instance.transform.origin = self.global_transform.origin + (Vector2.from_angle(self.global_rotation - deg_to_rad(90)) * 180)
 	# Gi den fart i kanonen sin retning
