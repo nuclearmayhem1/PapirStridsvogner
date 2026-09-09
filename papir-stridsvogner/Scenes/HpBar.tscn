@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://d0xcmqiwcvt4e"]
+
+[ext_resource type="Script" uid="uid://bx8keswr5mxbe" path="res://Scripts/hpbar.gd" id="1_10kfc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_acy74"]
+bg_color = Color(0.06683296, 0.16911525, 0.032422367, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5l251"]
+bg_color = Color(0.32324338, 0.732155, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_acy74"]
+font_size = 76
+font_color = Color(1, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.7529412)
+
+[node name="ProgressBar" type="ProgressBar" unique_id=820357167]
+offset_left = 71.0
+offset_top = 53.0
+offset_right = 542.0
+offset_bottom = 124.0
+theme_override_styles/background = SubResource("StyleBoxFlat_acy74")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5l251")
+max_value = 5.0
+value = 5.0
+show_percentage = false
+script = ExtResource("1_10kfc")
+
+[node name="TapTekst" type="Label" parent="." unique_id=230564955]
+visible = false
+layout_mode = 0
+offset_left = -75.0
+offset_top = -51.0
+offset_right = 1847.0
+offset_bottom = 1027.0
+text = "YOU LOSE"
+label_settings = SubResource("LabelSettings_acy74")
+horizontal_alignment = 1
+vertical_alignment = 1
