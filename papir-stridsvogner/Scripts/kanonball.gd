@@ -17,6 +17,10 @@ func _on_timer_timeout() -> void:
 
 
 func _on_collision_shape_2d_body_entered(body: Node2D) -> void:
+	if !body.has_method("take_damage"):
+		self.queue_free()
+		spawn_poof()
+		return
 	if self.is_in_group("hostile") and body.is_in_group("spiller"):
 		body.take_damage()
 		self.queue_free()
