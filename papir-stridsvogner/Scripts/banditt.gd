@@ -10,7 +10,6 @@ func _ready():
 	
 	spiller = spiller_liste[0]
 
-
 func _physics_process(_delta: float) -> void:
 	#hvis spilleren ikke er tilgjengelig stopper det koden å fortsett
 	if spiller == null: 

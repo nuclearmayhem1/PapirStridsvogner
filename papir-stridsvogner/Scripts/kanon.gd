@@ -2,7 +2,7 @@ extends Sprite2D
 
 var firing_speed = 500
 var firing_direction = Vector2.UP
-var kanonkule = preload("res://Scenes/kanonkule.tscn")
+var kanonkule = preload("res://Scenes/teknisk/kanonkule.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

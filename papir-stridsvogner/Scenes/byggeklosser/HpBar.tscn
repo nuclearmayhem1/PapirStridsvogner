@@ -4,17 +4,31 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_acy74"]
 bg_color = Color(0.06683296, 0.16911525, 0.032422367, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5l251"]
 bg_color = Color(0.32324338, 0.732155, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_o2vfv"]
+font_size = 76
+font_color = Color(0.88, 0.026399974, 0.026399974, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.7529412)
 
 [sub_resource type="LabelSettings" id="LabelSettings_acy74"]
 font_size = 76
-font_color = Color(1, 0, 0, 1)
-shadow_size = 2
+font_color = Color(0.22047013, 0.8289078, 1.92523e-06, 1)
+shadow_size = 3
 shadow_color = Color(0, 0, 0, 0.7529412)
 
-[node name="ProgressBar" type="ProgressBar" unique_id=820357167]
+[node name="HpBar" type="ProgressBar" unique_id=820357167]
 offset_left = 71.0
 offset_top = 53.0
 offset_right = 542.0
@@ -34,6 +48,18 @@ offset_top = -51.0
 offset_right = 1847.0
 offset_bottom = 1027.0
 text = "YOU LOSE"
+label_settings = SubResource("LabelSettings_o2vfv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VinTekst" type="Label" parent="." unique_id=1751660206]
+visible = false
+layout_mode = 0
+offset_left = -75.0
+offset_top = -51.0
+offset_right = 1847.0
+offset_bottom = 1027.0
+text = "YOU WIN"
 label_settings = SubResource("LabelSettings_acy74")
 horizontal_alignment = 1
 vertical_alignment = 1

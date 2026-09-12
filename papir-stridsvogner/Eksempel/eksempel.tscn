@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://d2sf7lmlptads"]
 
-[ext_resource type="PackedScene" uid="uid://bnuqbtkjkp1k0" path="res://Scenes/spiller.tscn" id="1_acy74"]
-[ext_resource type="PackedScene" uid="uid://dheg1cgn3jwtu" path="res://Scenes/kanon.tscn" id="2_h758t"]
-[ext_resource type="PackedScene" uid="uid://dh47jjsbopqah" path="res://Scenes/Vegger.tscn" id="3_5l251"]
-[ext_resource type="PackedScene" uid="uid://byo2w5gabse4e" path="res://Scenes/banditt.tscn" id="3_h758t"]
-[ext_resource type="PackedScene" uid="uid://d0xcmqiwcvt4e" path="res://Scenes/HpBar.tscn" id="5_h1vif"]
+[ext_resource type="PackedScene" uid="uid://bnuqbtkjkp1k0" path="res://Scenes/byggeklosser/spiller.tscn" id="1_acy74"]
+[ext_resource type="PackedScene" uid="uid://cit0ye4548i1l" path="res://Scenes/byggeklosser/bakgrunn.tscn" id="1_ypqh1"]
+[ext_resource type="PackedScene" uid="uid://dheg1cgn3jwtu" path="res://Scenes/byggeklosser/kanon.tscn" id="2_h758t"]
+[ext_resource type="PackedScene" uid="uid://dh47jjsbopqah" path="res://Scenes/byggeklosser/vegger.tscn" id="3_5l251"]
+[ext_resource type="PackedScene" uid="uid://byo2w5gabse4e" path="res://Scenes/byggeklosser/banditt.tscn" id="3_h758t"]
+[ext_resource type="PackedScene" uid="uid://d0xcmqiwcvt4e" path="res://Scenes/byggeklosser/HpBar.tscn" id="5_h1vif"]
 
 [node name="Node2D" type="Node2D" unique_id=1808755597]
+
+[node name="Bakgrunn" parent="." unique_id=121522876 instance=ExtResource("1_ypqh1")]
+position = Vector2(956, 537.99994)
 
 [node name="Spiller" parent="." unique_id=1425814717 instance=ExtResource("1_acy74")]
 position = Vector2(884, 438)
@@ -24,7 +28,6 @@ position = Vector2(1717, 136)
 
 [node name="Vegger" parent="." unique_id=1763322066 instance=ExtResource("3_5l251")]
 
-[node name="Control" parent="." unique_id=415434373 instance=ExtResource("5_h1vif")]
-z_index = 9
+[node name="HpBar" parent="." unique_id=820357167 instance=ExtResource("5_h1vif")]
 
-[connection signal="player_damage" from="Spiller" to="Control" method="_on_spiller_player_damage"]
+[connection signal="player_damage" from="Spiller" to="HpBar" method="_on_spiller_player_damage"]

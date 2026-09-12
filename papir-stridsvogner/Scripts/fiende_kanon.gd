@@ -1,10 +1,8 @@
 extends Sprite2D
 
 var firing_speed = 400
-var kanonkule = preload("res://Scenes/kanonkule.tscn")
+var kanonkule = preload("res://Scenes/teknisk/kanonkule.tscn")
 @onready var reload_timer: Timer = $"../Timer"
-
-
 
 func shoot():
 	# Forbered en ny kanonkule
@@ -17,7 +15,6 @@ func shoot():
 	kanonkule_instance.velocity =  Vector2.from_angle(self.global_rotation - deg_to_rad(90)) * firing_speed
 	# Plasser den i verden som "søsken" til spilleren, slik at den ikke henger etter spilleren
 	get_parent().add_sibling(kanonkule_instance)
-
 
 func _on_timer_timeout() -> void:
 	# Skyt kanonkule

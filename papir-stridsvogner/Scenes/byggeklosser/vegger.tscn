@@ -8,7 +8,7 @@ size = Vector2(20, 1107)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jkyn"]
 size = Vector2(1925, 20)
 
-[node name="StaticBody2D2" type="StaticBody2D" unique_id=1763322066]
+[node name="Vegger" type="StaticBody2D" unique_id=1763322066]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=367102172]
 position = Vector2(0, 543.5)

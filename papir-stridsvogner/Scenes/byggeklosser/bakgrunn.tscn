@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cit0ye4548i1l"]
+
+[ext_resource type="Texture2D" uid="uid://c20kv6plynhhq" path="res://Assets/Bakgrunn.png" id="1_e8d1r"]
+
+[node name="Bakgrunn" type="Sprite2D" unique_id=121522876]
+scale = Vector2(0.5513113, 0.4419355)
+texture = ExtResource("1_e8d1r")
